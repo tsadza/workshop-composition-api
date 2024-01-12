@@ -1,28 +1,29 @@
 <script setup>
-import { ref } from 'vue';
 import AboutApp from '@/components/layout/AboutApp.vue';
-import FetchDummyData from '@/pages/FetchDummyData.vue';
-import LifecycleHooks from '@/pages/LifecycleHooks.vue';
-import ProvideInject from '@/pages/ProvideInject.vue';
+import FetchDummyDataSolved from '@/pages/FetchDummyDataSolved.vue';
+import LifecycleHooksSolved from '@/pages/LifecycleHooksSolved.vue';
+import ProvideInjectSolved from '@/pages/ProvideInjectSolved.vue';
 import ReactiveProperties from '@/pages/ReactiveProperties.vue';
 import StateManagement from '@/pages/StateManagement.vue';
-import WatchForEffect from '@/pages/WatchForEffect.vue';
-import WritableComputed from '@/pages/WritableComputed.vue';
+import WatchForEffectSolved from '@/pages/WatchForEffectSolved.vue';
+import WritableComputedSolved from '@/pages/WritableComputedSolved.vue';
+import AppNavigation from '@/components/router/AppNavigation.vue';
 
-const toggle = ref(false);
+const componentsList = [
+  AboutApp,
+  ReactiveProperties,
+  WritableComputedSolved,
+  ProvideInjectSolved,
+  LifecycleHooksSolved,
+  StateManagement,
+  WatchForEffectSolved,
+  FetchDummyDataSolved,
+];
 </script>
 
 <template>
   <div id="app">
-    <about-app></about-app>
-    <button @click="toggle = !toggle">Toggle</button>
-    <reactive-properties></reactive-properties>
-    <writable-computed></writable-computed>
-    <provide-inject></provide-inject>
-    <lifecycle-hooks v-if="toggle"></lifecycle-hooks>
-    <state-management></state-management>
-    <watch-for-effect></watch-for-effect>
-    <fetch-dummy-data></fetch-dummy-data>
+    <app-navigation :componentsList="componentsList"></app-navigation>
   </div>
 </template>
 
@@ -30,8 +31,8 @@ const toggle = ref(false);
 h1 {
   color: blue;
   font-size: 2em;
-  line-height: 2em;
-  margin-top: 50px;
+  line-height: 0.9em;
+  margin-top: 20px;
   border-top: 5px dotted lightcoral;
   padding-top: 50px;
 }
@@ -49,5 +50,9 @@ strong {
   margin: 20px 0;
   padding: 20px;
   border: 1px dotted #777;
+}
+
+button {
+  margin: 2px;
 }
 </style>

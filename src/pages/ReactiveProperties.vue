@@ -1,3 +1,7 @@
+<script setup>
+//
+</script>
+
 <template>
   <div>
     <h1>Użycie ref i reactive do tworzenia reaktywnych danych.</h1>
