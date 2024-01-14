@@ -8,8 +8,10 @@ import StateManagement from '@/pages/StateManagement.vue';
 import WatchForEffectSolved from '@/pages/WatchForEffectSolved.vue';
 import WritableComputedSolved from '@/pages/WritableComputedSolved.vue';
 import AppNavigation from '@/components/router/AppNavigation.vue';
+import ErrorsBag from './pages/ErrorsBag.vue';
 
 const componentsList = [
+  ErrorsBag,
   AboutApp,
   ReactiveProperties,
   WritableComputedSolved,
