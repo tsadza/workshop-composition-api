@@ -12,8 +12,8 @@ const router = useRouterStore();
 
 <template>
   <div class="example">
-    <button v-for="(item, index) in componentsList" :key="index" @click="router.setComponent(item)">
-      {{ item.__name }}
+    <button v-for="(component, index) in componentsList" :key="index" @click="router.currentComponent = component">
+      {{ component.__name }}
     </button>
     <component :is="router.currentComponent" />
   </div>

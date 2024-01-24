@@ -6,9 +6,5 @@ export const useRouterStore = defineStore('router', () => {
 
   const currentComponent = ref(HomePage);
 
-  const setComponent = (selectedComponent) => {
-    currentComponent.value = selectedComponent;
-  }
-
-  return { currentComponent, setComponent };
+  return { currentComponent };
 });
